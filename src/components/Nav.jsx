@@ -71,7 +71,7 @@ export default function Nav() {
             userSelect: 'none',
           }}>
             <span>WAASALA</span>
-            <em style={{ fontStyle: 'italic', fontWeight: 400 }}>Heaven</em>
+            <em style={{ fontStyle: 'italic', fontWeight: 400 }}>Resort</em>
           </div>
 
           {!isMobile && (
