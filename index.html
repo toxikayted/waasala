@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#0d0b09;">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <!-- Safari status bar — black -->
+  <meta name="theme-color" content="#0d0b09"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <title>Waasala Eco Luxury Heaven — Anuradhapura, Sri Lanka</title>
+  <meta name="description" content="Waasala Eco Luxury Heaven — a sustainable luxury hotel in Anuradhapura, Sri Lanka, with heritage-themed rooms, an infinity pool, garden pub, fine dining and curated cultural experiences."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    /*
+      Safari iOS rubber-band overscroll fix.
+      The colour Safari shows when you scroll past the top or bottom
+      comes from the background-color of <html>, NOT <body>.
+      Body sits inside html, so we keep html dark and let the
+      React root handle the cream background internally.
+    */
+    html {
+      background-color: #0d0b09;
+      /* Prevent the bounce revealing white on sides */
+      overflow-x: hidden;
+    }
+    /* Hide content until fonts load — prevents FOUT flash */
+    body { opacity: 0; transition: opacity 0.15s; }
+    body.ready { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    // Mark body ready after first paint so fonts are loaded
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('ready');
+      });
+    });
+  </script>
+</body>
+</html>
